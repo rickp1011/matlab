@@ -1,50 +1,36 @@
 clear;
 clc;
 
-heart_attacko = Health;
+heartattacko = Health;
 healthyo = Health;
 %creating object for individuals with heart attack and healthy
 
-[heart_attacko.real,healthyo.real]=positive();
+[heartattacko.real,healthyo.real]= positive();
 
-heart_attacko.gender = heart_attacko.gendercount();
-heart_attacko.chest_pain_type=heart_attacko.chestpain();
-heart_attacko.ca = heart_attacko.cacount();
-heart_attacko.ecg= heart_attacko.ecgcount();
-heart_attacko.fbs = heart_attacko.fbscount();
-heart_attacko.exang = heart_attacko.exangcount();
-heart_attacko.slope =  heart_attacko.slopecount();
-heart_attacko.ca= heart_attacko.cacount();
-heart_attacko.thal= heart_attacko.thalcount();
+ [heartattacko.chest_pain_type,heartattacko.ca]=heartattacko.fourvariables();
+ [heartattacko.ecg,heartattacko.slope,heartattacko.thal]=heartattacko.threevariables();
+ [heartattacko.fbs,heartattacko.exang,heartattacko.gender]=heartattacko.twovariables();
 %counting of all the variables for heart attack 
 
-healthyo.gender = healthyo.gendercount();
-healthyo.chest_pain_type=healthyo.chestpain();
-healthyo.ca = healthyo.cacount();
-healthyo.ecg= healthyo.ecgcount();
-healthyo.fbs = healthyo.fbscount();
-healthyo.exang = healthyo.exangcount();
-healthyo.slope =  healthyo.slopecount();
-healthyo.ca= healthyo.cacount();
-healthyo.thal= healthyo.thalcount();
+ [healthyo.chest_pain_type,healthyo.ca]=healthyo.fourvariables();
+ [healthyo.ecg,healthyo.slope,healthyo.thal]=healthyo.threevariables();
+ [healthyo.fbs,healthyo.exang,healthyo.gender]=healthyo.twovariables();
 %counting of all the variables for heart attack 
 
-heart_attacko.stand= heart_attacko.calculationstdev();
-heart_attacko.average= heart_attacko.calculationmean();
-healthyo.stand=healthyo.calculationstdev();
-healthyo.average = healthyo.calculationmean();
+[heartattacko.average,heartattacko.stand]= heartattacko.calculation_stats();
+[healthyo.average,healthyo.stand] = healthyo.calculation_stats();
 %calcualting the standard deviation and mean for both healthy and heart
 %attack for all columns , this are stored in an array for us to analyse
 
 figure(1);
-heart_attacko.plotting();
+heartattacko.plotting();
 %plotttinf of graphs
 
 figure(2);
 healthyo.plotting();
 %plotttinf of graphs
 
-heart_attacko.prob =heart_attacko.probablity();
+heartattacko.prob =heartattacko.probablity();
 healthyo.prob = healthyo.probablity();
 
 function [z,q] = positive()

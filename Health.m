@@ -12,12 +12,10 @@ classdef Health
         stand=[];
         average = [];
         prob = [];
-
-      
-       
     end
     methods
-        function obj = chestpain(obj)
+        
+        function [z,a] = fourvariables(obj)
              for t=1:size(obj.real)
                 switch(obj.real(t,3))
                     case 1
@@ -29,12 +27,6 @@ classdef Health
                     case 4
                         obj.chest_pain_type(4) = obj.chest_pain_type(4) +1;
                 end
-             end
-             obj= obj.chest_pain_type;
-        end
-        %function to count chest pain types
-        function obj = cacount(obj)
-             for t=1:size(obj.real)
                 switch(obj.real(t,12))
                     case 0
                         obj.ca(1) = obj.ca(1) +1 ;
@@ -45,11 +37,15 @@ classdef Health
                     case 3
                         obj.ca(4) = obj.ca(4) +1;
                 end
+
              end
-             obj= obj.ca;
+             z= obj.chest_pain_type;
+             a= obj.ca;
         end
+        %function to count chest pain types
+
 %function to count number of blood vessels coloured s
-        function obj = ecgcount(obj)
+        function [z,a,w] = threevariables(obj)
             for t=1:size(obj.real)
                 switch(obj.real(t,7))
                     case 0
@@ -59,13 +55,15 @@ classdef Health
                     case 2
                         obj.ecg(3) = obj.ecg(3)+1;
                 end
-            end
-            obj= obj.ecg;
-        end
-        %function to count ecg types
-        function obj = slopecount(obj)
-            for t=1:size(obj.real)
-                switch(obj.real(t,11))
+               switch(obj.real(t,13))
+                    case 3
+                        obj.thal(1) = obj.thal(1) +1 ;
+                    case 6
+                        obj.thal(2) = obj.thal(2) +1;
+                    case 7
+                        obj.thal(3) = obj.thal(3)+1;
+               end
+               switch(obj.real(t,11))
                     case 1
                         obj.slope(1) = obj.slope(1) +1 ;
                     case 2
@@ -74,24 +72,13 @@ classdef Health
                         obj.slope(3) = obj.slope(3)+1;
                 end
             end
-            obj= obj.slope;
+            z= obj.ecg;
+                a = obj.slope;
+                w= obj.thal;
         end
-                %function to count slope types
-        function obj = thalcount(obj)
-            for t=1:size(obj.real)
-                switch(obj.real(t,13))
-                    case 3
-                        obj.thal(1) = obj.thal(1) +1 ;
-                    case 6
-                        obj.thal(2) = obj.thal(2) +1;
-                    case 7
-                        obj.thal(3) = obj.thal(3)+1;
-                end
-            end
-            obj= obj.thal;
-        end
+          
         %function to count thalium types
-        function obj = fbscount(obj)
+        function [z,a,w] = twovariables(obj)
             for t=1:size(obj.real)
                 switch(obj.real(t,6))
                     case 1
@@ -99,42 +86,35 @@ classdef Health
                     case 0
                         obj.fbs(2) = obj.fbs(2) +1;
                 end
-            end
-                obj = obj.fbs;
-        end
-        function obj = exangcount(obj)
-            for t=1:size(obj.real)
                 switch(obj.real(t,9))
                     case 1
                         obj.exang(1) = obj.exang(1) +1 ;
                     case 0
                         obj.exang(2) = obj.exang(2) +1;
                 end
-            end
-                obj = obj.exang;
-        end
-        function obj = gendercount(obj)
-            for t=1:size(obj.real)
                 switch(obj.real(t,2))
                     case 1
                         obj.gender(1) = obj.gender(1) +1 ;
                     case 0
                         obj.gender(2) = obj.gender(2) +1;
                 end
-            end
-                obj = obj.gender;
-        end       
 
-        function obj = calculationmean(obj)
+            end
+                
+                    z = obj.fbs;
+                    a = obj.exang;
+                    w = obj.gender;
+            end
+                
+
+
+            function [z,a] = calculation_stats(obj)
                 obj.average = mean(obj.real);
-                obj = obj.average;
+                obj.stand = std(obj.real);
+                z = obj.average;
+                a = obj.stand;
          end
 %function to calcuate mean
-        function obj = calculationstdev(obj)
-        obj.stand = std(obj.real);
-        obj = obj.stand;
-        end
-        %function to calcuate standarad deviation
 
 
         function obj = probablity(obj)
@@ -218,4 +198,6 @@ classdef Health
         
     end
 end
+
+
 
