@@ -126,71 +126,71 @@ classdef Health
 
         function plotting(obj)
       
-        subplot(6,2,1)
-        histogram(obj.real(:,4))
+        subplot(7,2,1)
+        histogram(r(:,4))
         title("Resting blood pressure ")
 
-        subplot(6,2,2)
-        histogram(obj.real(:,5))
+        subplot(7,2,2)
+        histogram(r(:,5))
         title("Serum cholesterol ")
      
-        subplot(6,2,3)
-        histogram(obj.real(:,8))
+        subplot(7,2,3)
+        histogram(r(:,8))
         title("Maximum heart rate achieved")
 
-        subplot(6,2,4)
-        histogram(obj.real(:,10))
+        subplot(7,2,4)
+        histogram(r(:,10))
         title("ST depression induced by exercise relative to rest")
 
-        subplot(6,2,5)
+        subplot(7,2,5)
         bar(obj.chest_pain_type)
         title("Chest pain type ")
         xticklabels({'typical angina','atypical angina','non-anginal pain','asymptomatic'})
 
 
-        subplot(6,2,6)
+        subplot(7,2,6)
         bar(obj.fbs)
         title("Fasting blood sugar > 120 mg/dl")
         xticklabels({'high','low'})
 
 
-        subplot(6,2,7)
+        subplot(7,2,7)
         bar(obj.ecg)
         title("Resting electrocardiographic results ")
         xticklabels({'normal','ST-T wave abnormality ','left ventricular hypertrophy'})
 
 
-        subplot(6,2,8)
+        subplot(7,2,8)
         bar(obj.exang)
         title("Exercise-induced angina ")
         xticklabels({'yes','no '})
 
 
-        subplot(6,2,8)
+        subplot(7,2,9)
         pie(obj.slope)
         legend('upsloping','flat','downsloping','Location','eastoutside')
         title("slope of the peak exercise ST segment")
 
 
-        subplot(6,2,9)
+        subplot(7,2,10)
         pie(obj.ca)
         legend('0','1','2','3','Location','eastoutside')
         title("Number of major vessels colored by fluoroscopy")
 
 
-        subplot(6,2,10)
+        subplot(7,2,11)
         pie(obj.thal)
         legend('normal','fixed defect','reversable_defect','Location','eastoutside')
         title("Thallium stress test results")
 
-        subplot(6,2,11)
+        subplot(7,2,12)
         pie(obj.gender)
         legend('male','female','Location','eastoutside')
         title("gender")
         
-        subplot(6,2,12)
+        subplot(7,2,13)
         axis =(30:5:60); 
-        histogram(obj.real(:,1),axis);
+        histogram(r(:,1),axis);
         title("ages")
  
         end
