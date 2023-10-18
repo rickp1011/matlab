@@ -4,15 +4,15 @@ What is the difference in the distribution of ages for people with
 and without heart disease? ]
 
 As seen from figure 1 bottom right graph (subplot 6,2,12), 
-older people have a relatively higher risk of getting heart disease 
-compared to other age groups.
+older people in the age group of 55 to 60 have a relatively higher risk of getting a heart disease 
+compared to other age group (e.g. in age group 40-45, 45-50, 50-55).
 
 
 [Which gender has a higher risk of getting heart disease? 
 What is the probability for a male/female to get heart disease?]
 
 As seen from figure 1 bottom left graph(subplot 6,2,11),
-90% of those suffering from heart disease in the unhealthy group is male.
+90% of those suffering from heart diseases is male.
 Therefore it is safe to conclude that a male has a 
 relatively higher risk of getting a heart disease.
 
@@ -21,5 +21,6 @@ relatively higher risk of getting a heart disease.
 is the difference in the test results for patients with and without heart disease?]
 
 Potentially, lowered ST depression induced by exercise relative to rest, having asymptomatic type chest pain
-higher ventricular hypertrophy ,lower number of major vessel coloured by fluoroscopy
-flat slope of peak exercise ST segment, increased reversable defect of thallium stress test.
+higher left ventricular hypertrophy ,lower number of major vessel coloured by fluoroscopy
+flat slope of peak exercise ST segment, increased reversable defect of thallium stress test. However,
+the symptoms are not definitive of heart diseases but the likelihood of one.
