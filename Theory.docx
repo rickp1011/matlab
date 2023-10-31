@@ -5,23 +5,21 @@ and without heart disease? ]
 
 As seen from figure 1 bottom right graph (subplot 6,2,12), 
 older people in the age group of 55 to 60 have a relatively higher risk of getting a heart disease 
-compared to other age group (e.g. in age group 40-45, 45-50, 50-55).
-
+compared to other age group (e.g. in age group 40-45, 45-50, 50-55), which have low or no risk of heart disease.
 
 [Which gender has a higher risk of getting heart disease? 
 What is the probability for a male/female to get heart disease?]
 
 As seen from figure 1 bottom left graph(subplot 6,2,11),
-90% of those suffering from heart diseases is male.
-Therefore it is safe to conclude that a male has a 
-relatively higher risk of getting a heart disease.
+90% of those suffering from heart diseases are male.
+Therefore, it is safe to conclude that males are at higher risk of getting a heart disease.
 
 
 [What kind of test results show more indication that a patient has heart disease? What
 is the difference in the test results for patients with and without heart disease?]
 
 Lowered ST depression induced by exercise relative to rest, having asymptomatic type chest pain
-higher left ventricular hypertrophy ,lower number of major vessel coloured by fluoroscopy
+higher left ventricular hypertrophy, lower number of major vessel coloured by fluoroscopy
 flat slope of peak exercise ST segment, increased reversable defect of thallium stress test and
-an presence of exercise induced angina are indications of the likelyhood of getting a heart disease.
-As mentioned, the symptoms are not definitive of a heart disease but a likelyhood of one.
+the presence of exercise-induced angina indicates the likelihood of getting a heart disease.
+However, symptoms only illustrate the likelihood of heart disease but not necessarily to confirm a diagnosis.
