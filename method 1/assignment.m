@@ -21,9 +21,9 @@ slope_h = [0,0,0];
 ca_h = [0,0,0,0];
 thal_h = [0,0,0];
 
-[heart_attack,healthy,T]=positive(); %for person with heart disease
+[heart_attack,healthy,T]=positive(); %for person positive for heart disease
 
-chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4); %for person with heart disease, chest pain type with user defined function four variable, case 3
+chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4); %for person with heart disease, chest pain type with user defined function four variable cases with corresponding attributes
 fbs = twovaraible(heart_attack,fbs,6,1,0);
 ecg= threevaraible(heart_attack,ecg,7,0,1,2);
 exang = twovaraible(heart_attack,exang,9,1,0);
@@ -32,7 +32,7 @@ ca=fourvariable(heart_attack,ca,12,0,1,2,3);
 thal= threevaraible(heart_attack,thal,13,3,6,7);
 gender = twovaraible(heart_attack,gender,2,1,0);
 
-chest_pain_type_h=fourvariable(healthy,chest_pain_type_h,3,1,2,3,4);
+chest_pain_type_h=fourvariable(healthy,chest_pain_type_h,3,1,2,3,4); %for healthy person, chest pain type with user defined function four variable cases with corresponding attributes
 fbs_h = twovaraible(healthy,fbs_h,6,1,0);
 ecg_h=threevaraible(healthy,ecg_h,7,0,1,2);
 exang_h = twovaraible(healthy,exang_h,9,1,0);
@@ -41,17 +41,17 @@ ca_h=fourvariable(healthy,ca_h,12,0,1,2,3);
 thal_h=threevaraible(healthy,thal_h,13,3,6,7);
 gender_h = twovaraible(healthy,gender_h,2,1,0);
 
-[avg,sdv] = calculationstdev_mean(heart_attack(:,1));
-[avg_h,sdv_h] = calculationstdev_mean(healthy(:,1));
+[avg,sdv] = calculationstdev_mean(heart_attack(:,1)); %calculation of average and standard deviation of those with heart disease
+[avg_h,sdv_h] = calculationstdev_mean(healthy(:,1)); %calculation of average and standard deviation of those that are healthy
 
-figure(1)
+figure(1) %Plots of attributes contributing to ones with heart disease
 plotting(heart_attack,chest_pain_type,fbs,ecg,exang,slope,ca,thal,gender);
 
-figure(2)
+figure(2) %Plots of attributes contributing to ones that are healthy
 plotting(healthy,chest_pain_type_h,fbs_h,ecg_h,exang_h,slope_h,ca_h,thal_h,gender_h);
 
-prob_heartattack = probablity(gender,T);
-prob_healthy = probablity(gender_h,T);
+prob_heartattack = probablity(gender,T); %calculation of probability suffering from heart disease of a certain gender
+prob_healthy = probablity(gender_h,T); %calculation of probability suffering from heart disease to the healthy ones of a certain gender
 
 
 
