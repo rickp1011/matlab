@@ -2,8 +2,8 @@ clear;
 clc;
 
 %heart attack
-gender = [0,0];
-chest_pain_type = [0,0,0,0];
+gender = [0,0]; %Assign gender with empty array, male=1, female=0 for person with heart disease
+chest_pain_type = [0,0,0,0]; %Assign number of variables with empty array with corresponsing attributes for person with heart disease
 fbs = [0,0];
 ecg = [0,0,0];
 exang = [0,0];
@@ -12,8 +12,8 @@ ca = [0,0,0,0];
 thal = [0,0,0];
 
 %healthy
-gender_h = [0,0];
-chest_pain_type_h = [0,0,0,0];
+gender_h = [0,0]; %Assign gender with 2 variable, male=1, female=0 for healthy person
+chest_pain_type_h = [0,0,0,0]; %Assign number of variables with empty array with corresponding attributes for healthy person
 fbs_h = [0,0];
 ecg_h = [0,0,0];
 exang_h = [0,0];
@@ -21,9 +21,9 @@ slope_h = [0,0,0];
 ca_h = [0,0,0,0];
 thal_h = [0,0,0];
 
-[heart_attack,healthy,T]=positive();
+[heart_attack,healthy,T]=positive(); %for person with heart disease
 
-chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4);
+chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4); %
 fbs = twovaraible(heart_attack,fbs,6,1,0);
 ecg= threevaraible(heart_attack,ecg,7,0,1,2);
 exang = twovaraible(heart_attack,exang,9,1,0);
