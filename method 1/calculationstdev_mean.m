@@ -1,4 +1,4 @@
-function [m,n] = calculationstdev_mean(x) %user defined function of calculation of standard deviation and mean value
+function [m,n] = calculationstdev_mean(x) 
     m = mean(x);
     n = std(x);
 end
