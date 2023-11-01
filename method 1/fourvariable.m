@@ -1,4 +1,4 @@
-function z = fourvariable(x,a,col,h,j,k,l)   %user defined function for chest pain type, positive for heart disease
+function z = fourvariable(x,a,col,h,j,k,l) 
     for t=1:size(x)
         switch(x(t,col))
             case h
