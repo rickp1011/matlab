@@ -50,8 +50,8 @@ plotting(heart_attack,chest_pain_type,fbs,ecg,exang,slope,ca,thal,gender);
 figure(2) %Plots of attributes contributing to ones that are healthy
 plotting(healthy,chest_pain_type_h,fbs_h,ecg_h,exang_h,slope_h,ca_h,thal_h,gender_h);
 
-prob_heartattack = probablity(gender,T); %calculation of probability suffering from heart disease of a certain gender
-prob_healthy = probablity(gender_h,T); %calculation of probability suffering from heart disease to the healthy ones of a certain gender
+prob_heartattack = probablity(gender,T); %calculation of probability suffering from heart disease of a certain gender put in a array
+prob_healthy = probablity(gender_h,T); %calculation of probability suffering from heart disease to the healthy ones of a certain gender put in a array
 
 
 
