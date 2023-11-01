@@ -23,7 +23,7 @@ thal_h = [0,0,0];
 
 [heart_attack,healthy,T]=positive(); %for person with heart disease
 
-chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4); %
+chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4); %for person with heart disease, chest pain type with user defined function four variable, case 3
 fbs = twovaraible(heart_attack,fbs,6,1,0);
 ecg= threevaraible(heart_attack,ecg,7,0,1,2);
 exang = twovaraible(heart_attack,exang,9,1,0);
