@@ -1,7 +1,5 @@
 function [z,q,t] = positive()
-%
-this function is to sort the Heart attack and the healthy  into different arrays  of heart attack and healthy 
-%
+%this function is to sort the Heart attack and the healthy  into different arrays  of heart attack and healthy 
     load("HeartDisease.mat");
     x=sortrows(T,14,"descend");
     for t = 1:size(x)
