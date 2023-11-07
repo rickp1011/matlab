@@ -21,7 +21,7 @@ slope_h = [0,0,0];                  %with corresponding attributes for healthy p
 ca_h = [0,0,0,0];
 thal_h = [0,0,0];
 
-[heart_attack,healthy,T]=positive();    %for person positive for heart disease
+[heart_attack,healthy,T]=positive();    % sort for person positive for heart disease 
 
 chest_pain_type =fourvariable(heart_attack,chest_pain_type,3,1,2,3,4);   %for person with heart disease, chest pain type with 
 fbs = twovaraible(heart_attack,fbs,6,1,0);                               %user defined function four variable cases with 
