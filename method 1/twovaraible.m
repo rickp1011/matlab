@@ -16,4 +16,3 @@ function z = twovaraible(x,a,col,h,k)
     end
     z = a;
 end
-
