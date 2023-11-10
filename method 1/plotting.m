@@ -1,5 +1,10 @@
 function plotting(x,a,b,c,d,e,f,g,h)
-% function is to plot all the columns in a subplot so that we can view all at once and compare between heart disease and healthy
+% function is to plot all the columns in a subplot
+% so that we can view all at once and compare between heart disease and
+% healthy subplot of 7 roles 2 columns are used to plot the graphs for all
+% thirteen column all this graphs are later used in our analysis for the
+% question c where we want to find what is difference between healthy and
+% heart attack
     subplot(7,2,1)
     histogram(x(:,4))
     title("Resting blood pressure ")
